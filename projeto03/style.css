@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  background-color: #e5e5e5;
+}
+
+body::before {
+  content: "";
+  width: 100%;
+  height: 368px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: black;
+}
+
+header h1 {
+  font-family: "archivo", sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+  color: white;
+  line-height: 42px;
+  padding-bottom: 24px;
+}
+
+header p {
+  font-size: 16px;
+  line-height: 26px;
+  color: #42d3ff;
+}
+
+header {
+  margin-top: 74px;
+  height: auto;
+  width: 319px;
+}
+
+.page {
+  width: 736px;
+  margin: auto;
+}
+
+form {
+  min-height: 300px;
+  width: 736px;
+  background-color: #fafafc;
+  margin-top: 38px;
+  border-radius: 8px;
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+fieldset legend {
+  width: 100%;
+  font-family: "Archivo", sans-serif;
+  border-bottom: 1px #e6e6f0 solid;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 34px;
+  padding: 16px 0;
+}
+
+.input-wrap {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+}
+
+.input-wrap label,
+.checkbox-wrap label {
+  color: #4e4958;
+  font-weight: 400;
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.input-wrap label span {
+  font-family: "poppins", sans-serif;
+  margin-left: 12px;
+  color: #c1bccc;
+}
+
+.input-wrap label span:hover {
+  color: #56545c;
+}
+
+.input-wrap input,
+.input-wrap textarea,
+.input-wrap select {
+  width: 100%;
+  height: 56px;
+  color: #000000;
+  border: 1px #e6e6f0 solid;
+  border-radius: 8px;
+  padding: 0 24px;
+  background: #fafafc;
+  font-size: 16px;
+  line-height: 26px;
+  color: #5a585f;
+}
+
+.input-wrap textarea {
+  padding: 5px;
+  height: 168px;
+}
+
+.input-wrap select {
+  appearance: none;
+  background-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_65_657)"><path d="M8 10L12 14L16 10" stroke="%239C98A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_65_657"><rect width="24" height="24" fill="white"/></clipPath></defs></svg>');
+  background-repeat: no-repeat;
+  background-position: right 24px top 50%;
+}
+
+.col-3 {
+  display: flex;
+  gap: 20px;
+}
+
+.col-3 > div:nth-child(1) {
+  width: 100%;
+}
+
+.checkbox-wrap input {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+}
+
+.checkbox-wrap label {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.checkbox-wrap label::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 1px #e6e6f0 solid;
+  border-radius: 8px;
+}
+
+.checkbox-wrap input:checked + label::before {
+  background-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_2970_33)"><path d="M9.00016 16.1698L4.83016 11.9998L3.41016 13.4098L9.00016 18.9998L21.0002 6.99984L19.5902 5.58984L9.00016 16.1698Z" fill="%2342D3FF"/></g><defs><clipPath id="clip0_2970_33"><rect width="24" height="24" fill="white"/></clipPath></defs></svg>');
+}
+
+.checkbox-wrap input:focus + label::before {
+  outline: 2px black solid;
+}
+
+footer {
+  background-color: #f0f0f4;
+  height: 136px;
+  border-radius: 0 0 8px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .button {
+  width: 500px;
+  height: 56px;
+  background-color: #04d361;
+  border-radius: 8px;
+  padding: 15px auto;
+  border: none;
+  font-family: Archivo;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #f0f0f4;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+footer .button:hover {
+  background-color: #0bb95a;
+}
+
+input:invalid {
+  border: 1px rgb(177, 0, 0) solid;
+}
